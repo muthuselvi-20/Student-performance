@@ -1,2 +1,10 @@
 # Student-performance
-Student Performance Prediction Model uses Machine Learning to predict student academic results based on study hours, attendance, and previous scores. Built using Python, Pandas, Scikit-learn, and data visualization techniques for analysis, training, and prediction.
+Student Performance Prediction Model uses Machine Learning to predict student performance index based on hours studied, previous scores, extracurricular activities, sleep hours and	sample question papers practiced.
+
+## Built Using
+- Python
+- Pandas
+- Scikit-learn
+- Matplotlib
+- NumPy
+- Seaborn
