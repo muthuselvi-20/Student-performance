@@ -8,3 +8,5 @@ Student Performance Prediction Model uses Machine Learning to predict student pe
 - Matplotlib
 - NumPy
 - Seaborn
+- Streamlit
+- Joblib
