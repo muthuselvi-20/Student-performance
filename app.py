@@ -21,4 +21,3 @@ if st.button("Predict Performance"):
 
     st.success("Prediction made successfully!") 
 
-#https://youtube.com/playlist?list=PLMi6KgK4_mk2rK5jD-BK5RigFIP2QSq8W&si=vVvJAScnMyRe1_8h
