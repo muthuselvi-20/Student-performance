@@ -2,12 +2,16 @@ import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
 model = joblib.load("student_performance_model.pkl")    
 
 st.title("Student Performance Prediction")
 
 st.subheader("Enter Student Details")
+
+scaler = StandardScaler()
+
 a = st.number_input("Hours Studied", min_value=0.0, max_value=24.0, step=0.1)
 b = st.number_input("Previous Scores", min_value=0.0, max_value=100.0, step=0.1)
 c = st.selectbox("Extracurricular Activities", [1, 0])
@@ -16,7 +20,7 @@ e = st.number_input("Sample Question Papers Practiced", min_value=0.0, max_value
                     
 if st.button("Predict Performance"):
     input_data = pd.DataFrame([[a, b, c, d, e]], columns=["Hours Studied", "Previous Scores", "Extracurricular Activities", "Sleep Hours", "Sample Question Papers Practiced"])
-    prediction = model.predict(input_data)
+    prediction = model.predict(scaler.fit_transform(input_data))
     st.subheader(f"Predicted Performance Score: {prediction[0]:.2f}")   
 
     st.success("Prediction made successfully!") 
